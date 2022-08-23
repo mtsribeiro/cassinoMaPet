@@ -6,7 +6,3 @@
 .btn-Games:hover{
     background-color: var(--hover-red);
 }
-
-.text-red{
-    color: var(--hover-red)
-}
