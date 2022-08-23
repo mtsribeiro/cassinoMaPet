@@ -1,5 +1,5 @@
-carregamentoStatico('/crash/teste.html', '#MenuTop')
-carregamentoStatico('/crash/teste.html', '#MenuLateral')
+carregamentoStatico('/home/barraTopo.html', '#MenuTop')
+carregamentoStatico('/home/barraLateral.html', '#MenuLateral')
 
 function carregamentoStatico(arquivo, local){
     fetch(arquivo)
