@@ -7,16 +7,189 @@
     <title>Crash</title>
     <link rel="stylesheet" href="../bootstrap.min.css" />
     <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./crash.css" />
+    <link rel="stylesheet" href="./crash_game.css" />
 </head>
 <body>
 <div id="MenuTop"></div>
 <div id="MenuLateral"></div>
 
+<div id="page-container">
+  <div class="scrollable">
+    <div id="casino" class="page">
+      <div id="crash" class="page">
+        <div class="content">
+          <div class="game-controller-container">
+            <div id="crash-controller" class="controller">
+              <div class="body">
+                <div class="tabbed-nav" data-testid="free-rounds-nav">
+                  <div class="selected">Normal</div>
+                  <div data-testid="auto-nav">Auto</div>
+                </div>
+                <div class="regular-betting-controller">
+                  <div class="inputs-wrapper">
+                    <div class="bet-input-row bet-input-row--regular-bets">
+                      <div class="balance-input-field">
+                        <div class="input-field-wrapper">
+                          <span class="label">Quantia</span>
+                          <input type="number" class="input-field" value="">
+                        </div>
+                        <div class="emblem">R$</div>
+                      </div>
+                      <button class="grey half">½</button>
+                      <button class="grey double">2x</button>
+                    </div>
+                    <div class="input input-style-1 input valid-input cashout not-enabled status-invisible false  undefined undefined">
+                      <div class="input-wrapper">
+                        <span class="label">Auto Retirar</span>
+                        <input data-testid="auto-cashout" value="">
+                        <span class="symbol">
+                          <i class="fa fa-times" alt=""></i>
+                        </span>
+                      </div>
+                      <div class="input-buttons"></div>
+                    </div>
+                  </div>
+                  <div class="place-bet">
+                    <button type="button" title="" class="red undefined " disabled="" data-testid="">Começar o jogo </button>
+                  </div>
+                </div>
+              </div>
+              <div class="casino-extras">
+                <div class="first-column">
+                  <a>
+                    <button class="grey">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 6H0V1C0 0.4 0.4 0 1 0H6V2H2V6Z" fill="#8C9099"></path>
+                        <path d="M16 6H14V2H10V0H15C15.6 0 16 0.4 16 1V6Z" fill="#8C9099"></path>
+                        <path d="M15 16H10V14H14V10H16V15C16 15.6 15.6 16 15 16Z" fill="#8C9099"></path>
+                        <path d="M6 16H1C0.4 16 0 15.6 0 15V10H2V14H6V16Z" fill="#8C9099"></path>
+                      </svg>
+                    </button>
+                  </a>
+                </div>
+                <div class="second-column">
+                  <div class="share-btn-extras-container"></div>
+                  <div class="grey-important">
+                    <button class="grey">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 0C3.6 0 0 3.6 0 8C0 12.4 3.6 16 8 16C12.4 16 16 12.4 16 8C16 3.6 12.4 0 8 0ZM9 12H7V7H9V12ZM8 6C7.4 6 7 5.6 7 5C7 4.4 7.4 4 8 4C8.6 4 9 4.4 9 5C9 5.6 8.6 6 8 6Z" fill="white"></path>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="volume volume-btn">
+                    <button class="grey">
+                      <i class="fa fa-volume-up"></i>
+                    </button>
+                  </div>
+                  <a class="volume-mobile">
+                    <button class="grey">
+                      <i class="fa fa-volume-up"></i>
+                    </button>
+                  </a>
+                  <div class="fairness-modal-link icon-history">
+                    <i class="fas fa-history"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="crash-wrapper">
+              <div id="crash-canvas" class="game">
+                <div>
+                  <canvas id="crash-main-canvas" width="679" height="383"></canvas>
+                </div>
+              </div>
+              <div id="crash-recent">
+                <div class="label">Anterior</div>
+                <div class="crash-previous">
+                  <div class="fairness-modal-link">
+                    <img alt="round-history" src="/static/media/round-history.d31132da.svg">
+                  </div>
+                  <div class="entries">
+                    <span class="good">122.94X</span>
+                    <span class="good">21.82X</span>
+                    <span class="good">2.29X</span>
+                    <span class="bad">1.66X</span>
+                    <span class="bad">1.67X</span>
+                    <span class="good">3.69X</span>
+                    <span class="bad">1.28X</span>
+                    <span class="bad">1.45X</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="crash-bottom">
+            <div class="totals">
+              <div class="left">
+                <span>2202</span> jogadores <span>fizeram suas apostas</span>
+              </div>
+              <div class="right">
+                <span>R$4778.90</span>
+              </div>
+            </div>
+            <div class="casino-table-wrapper">
+              <table class="casino-table dark-header crash-entries">
+                <colgroup>
+                  <col width="61%">
+                  <col width="15%">
+                  <col width="11%">
+                  <col width="13%">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>
+                      <div>Usuário</div>
+                    </th>
+                    <th>
+                      <div>Aposta</div>
+                    </th>
+                    <th>
+                      <div>Multiplicador</div>
+                    </th>
+                    <th>
+                      <div>Lucro</div>
+                    </th>
+                  </tr>
+                </thead>
+             <tbody>
+              <tr class="entry cashed-out">
+                <td>
+                  <div class="user">
+                    <div class="user-rank">
+                      <img alt="rank" src="assets/media/platinum.7c6cdb94.svg">
+                    </div>
+                    <a class="user-profile-link" href="/pt/games/crash?modal=profile&amp;user_id=Wplzjqyyln">
+                      <span>RODRIGO</span>
+                    </a>
+                  </div>
+                </td>
+                <td>
+                  <div class="bet">R$ 2000.00</div>
+                </td>
+                <td>
+                  <div class="cashout">9.88X</div>
+                </td>
+                <td>
+                  <div class="profit">R$ 17760.00</div>
+                </td>
+              </tr>
+             </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+</div>
+
 
 
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
  
-    <script src="../assets/js/main.js"></script>
+<script src="../assets/js/main.js"></script>
 
 
 </body>
