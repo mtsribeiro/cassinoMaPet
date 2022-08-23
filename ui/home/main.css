@@ -1,3 +1,12 @@
+:root{
+    --color-title: #32fbe2;
+    --hover-red: #e14f58;
+}
+
 .btn-Games:hover{
-    background-color: #e14f58;
+    background-color: var(--hover-red);
+}
+
+.text-red{
+    color: var(--hover-red)
 }
