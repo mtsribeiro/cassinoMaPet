@@ -1,26 +1,17 @@
-html{
+:root{
+    --fundo-color: #0f1923;
+}
+
+body{
     overflow-y: hidden;
     overflow-x: hidden;
+    background-color: var(--fundo-color);
 }
 
-:root{
-    --primary-color: #2aa4e7;
-    --hover-red: #e14f58;
-}
-
-.btn-Games:hover{
-    background-color: var(--hover-red);
-}
-
-.menu-lateral{
-    padding: 0px;
-    border-right: solid 0.5px #3c4043;
-}
-
-.indexGames{
-    padding: 0px
-}
-
-.menu-cima{
+.bordaMenuTopo{
     border-bottom: solid 0.5px #3c4043;
+}
+
+.bordaMenuDireita{
+    border-right: solid 0.5px #3c4043;
 }
