@@ -1,8 +1,26 @@
+html{
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
 :root{
-    --color-title: #32fbe2;
+    --primary-color: #2aa4e7;
     --hover-red: #e14f58;
 }
 
 .btn-Games:hover{
     background-color: var(--hover-red);
+}
+
+.menu-lateral{
+    padding: 0px;
+    border-right: solid 0.5px #3c4043;
+}
+
+.indexGames{
+    padding: 0px
+}
+
+.menu-cima{
+    border-bottom: solid 0.5px #3c4043;
 }
