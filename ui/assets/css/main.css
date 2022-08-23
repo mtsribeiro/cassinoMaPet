@@ -15,3 +15,18 @@ body{
 .bordaMenuDireita{
     border-right: solid 0.5px #3c4043;
 }
+
+.ColorBronze{
+    color: #8C7853 !important;
+}
+
+.InformacaoLevel{
+    color: #888;
+}
+
+.nav-link:hover{
+    border-right: solid 1px #ff0000 !important;
+    font-weight: bold;
+    border-radius: 0px;
+    width: 100%;
+}
