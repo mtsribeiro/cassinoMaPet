@@ -1,0 +1,17 @@
+:root{
+    --fundo-color: #0f1923;
+}
+
+body{
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background-color: var(--fundo-color);
+}
+
+.bordaMenuTopo{
+    border-bottom: solid 0.5px #3c4043;
+}
+
+.bordaMenuDireita{
+    border-right: solid 0.5px #3c4043;
+}
