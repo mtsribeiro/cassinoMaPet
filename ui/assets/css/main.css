@@ -45,8 +45,8 @@ body{
     background-color: transparent !important;
 }
 
-.menu-Accordion:active{
-    background-color: #000 !important;
+.menu-Accordion:focus{
+    box-shadow: none;
 }
 
 .accordion-item {
