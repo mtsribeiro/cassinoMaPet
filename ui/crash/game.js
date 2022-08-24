@@ -9,8 +9,11 @@ $(document).on('click', '#btn__start', function(e){
     /* 20% */
         var time = getRandom(0, 100)
        console.log('20%')
+    }else if (d <= 0.1){
+        var time = getRandom(0, 1000)
+        console.log('deu liga')
     }else{
-    
+        var time = getRandom(0, 20)
     }
     
      var duration = time; // Converter para segundos
@@ -29,14 +32,24 @@ $(document).on('click', '#btn__start', function(e){
     
     function startTimer(duration, display) {
         $('.multiplicador').css('display', 'block');
+        $('#btn__stop').css('display', 'block');
         $('#btn__start').attr('disabled', true);
+        $('#btn__start').css('display', 'none');
+
             var contagem = 1
+            var minuto = 0
         
-        var timer = duration, minutes, seconds;
+        var timer = duration, minuto, seconds;
     var contagem_tempo = setInterval(function () {
                     
-                    contagem = contagem+0.05
-                    display.textContent = contagem.toFixed(2)+'x';
+                    contagem = contagem+0.01
+                    contagem_geral = contagem.toFixed(2);
+                    display.textContent = contagem_geral+'x';
+
+                    var valor_aposta = $('#valor_aposta').val() 
+                  
+                    $('#btn__stop').text('Retirar R$'+(valor_aposta*contagem_geral).toFixed(2))
+                    
     
         
             seconds = parseInt(timer % 60, 10);
@@ -46,16 +59,23 @@ $(document).on('click', '#btn__start', function(e){
                /*  timer = duration; */
                 clearInterval(contagem_tempo)
                 $('#btn__start').attr('disabled', false);
+                $('#btn__start').css('display', 'block');
+
+                $('#btn__stop').css('display', 'none');
+               
                 $('.multiplicador').css('background-color', '#f12c4c');
                 $('.crash_display').css('display', 'block');
                 
                 setTimeout(() => {
-                    $('.multiplicador').css('display', 'none');
+                    
                     $('.crash_display').css('display', 'none');
-                }, 1000);
+                    $('.multiplicador').css('display', 'none');
+                    $('.multiplicador').css('background-color', '#1a252f');
+                    
+                }, 2000);
                 return false
             }
-            console.log(seconds)
+            console.log(timer)
             
             
         }, 100);
