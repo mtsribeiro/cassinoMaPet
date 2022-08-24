@@ -39,5 +39,21 @@ body{
 
 .DescricaoLateral:hover{
     color: #fff;
+}
+
+.menu-Accordion{
+    background-color: transparent !important;
+}
+
+.menu-Accordion:active{
+    background-color: #000 !important;
+}
+
+.accordion-item {
+    background-color: transparent;
+}
+
+.accordion .opcaoLateral{
+    color: #888;
     font-weight: bold;
 }
