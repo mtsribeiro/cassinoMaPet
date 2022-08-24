@@ -1,34 +1,7 @@
 $(document).on('click', '#btn__start', function(e){
 
-    var d = Math.random();
-    if (d <= 0.5){
-    /* 50% */
-       var time = getRandom(0, 50)
-       console.log('50%')
-    }else if (d <= 0.8){
-    /* 20% */
-        var time = getRandom(0, 100)
-       console.log('20%')
-    }else if (d <= 0.1){
-        var time = getRandom(0, 1000)
-        console.log('deu liga')
-    }else{
-        var time = getRandom(0, 20)
-    }
-    
-     var duration = time; // Converter para segundos
-            display = document.querySelector('.multiplicador'); // selecionando o timer
-        startTimer(duration, display); // iniciando o timer
-    })
-    
-    
-    function getRandom(min, max) {
-      return Math.random() * (max - min) + min;
-    }
-    
-    
-        
-    
+})
+
     
     function startTimer(duration, display) {
         $('.multiplicador').css('display', 'block');
@@ -80,3 +53,18 @@ $(document).on('click', '#btn__start', function(e){
             
         }, 100);
     }
+
+
+
+    socket.on('start_crash', function(msg) {
+        $('.multiplicador').css('display', 'block');
+        $('.multiplicador').text(msg.multiplicador)
+        console.log(msg)
+    })
+
+    socket.on('start_end', function(msg) {
+        $('.multiplicador').css('display', 'block');
+        $('.multiplicador').text(msg.multiplicador)
+        console.log(msg)
+    })
+

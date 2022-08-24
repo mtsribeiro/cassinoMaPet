@@ -1,3 +1,5 @@
+var socket = io();
+
 carregamentoStatico('../assets/html/barraTopo.html', '#MenuTop')
 carregamentoStatico('../assets/html/barraLateral.html', '#MenuLateral')
 
