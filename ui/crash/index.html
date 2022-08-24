@@ -27,76 +27,29 @@
           <div class="game-controller-container">
             <div id="crash-controller" class="controller">
               <div class="body">
-                <div class="tabbed-nav" data-testid="free-rounds-nav">
-                  <div class="selected">Normal</div>
-                  <div data-testid="auto-nav">Auto</div>
-                </div>
+              
                 <div class="regular-betting-controller">
                   <div class="inputs-wrapper">
                     <div class="bet-input-row bet-input-row--regular-bets">
                       <div class="balance-input-field">
                         <div class="input-field-wrapper">
-                          <span class="label">Quantia</span>
-                          <input type="number" class="input-field" value="">
+                          <!-- <span class="label">Quantia</span> -->
+                          <input type="number" id="valor_aposta" class="input-field" value="">
                         </div>
                         <div class="emblem">R$</div>
                       </div>
                       <button class="grey half">½</button>
                       <button class="grey double">2x</button>
                     </div>
-                    <div class="input input-style-1 input valid-input cashout not-enabled status-invisible false  undefined undefined">
-                      <div class="input-wrapper">
-                        <span class="label">Auto Retirar</span>
-                        <input data-testid="auto-cashout" value="">
-                        <span class="symbol">
-                          <i class="fa fa-times" alt=""></i>
-                        </span>
-                      </div>
-                      <div class="input-buttons"></div>
-                    </div>
+                   
                   </div>
                   <div class="place-bet">
                     <button id="btn__start" type="button" title="" class="red" data-testid="">Começar o jogo </button>
+                    <button id="btn__stop" type="button" title="" style="display: none;" class="red" data-testid=""></button>
                   </div>
                 </div>
               </div>
-              <div class="casino-extras">
-                <div class="first-column">
-                  <a>
-                    <button class="grey">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2 6H0V1C0 0.4 0.4 0 1 0H6V2H2V6Z" fill="#8C9099"></path>
-                        <path d="M16 6H14V2H10V0H15C15.6 0 16 0.4 16 1V6Z" fill="#8C9099"></path>
-                        <path d="M15 16H10V14H14V10H16V15C16 15.6 15.6 16 15 16Z" fill="#8C9099"></path>
-                        <path d="M6 16H1C0.4 16 0 15.6 0 15V10H2V14H6V16Z" fill="#8C9099"></path>
-                      </svg>
-                    </button>
-                  </a>
-                </div>
-                <div class="second-column">
-                  <div class="share-btn-extras-container"></div>
-                  <div class="grey-important">
-                    <button class="grey">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8 0C3.6 0 0 3.6 0 8C0 12.4 3.6 16 8 16C12.4 16 16 12.4 16 8C16 3.6 12.4 0 8 0ZM9 12H7V7H9V12ZM8 6C7.4 6 7 5.6 7 5C7 4.4 7.4 4 8 4C8.6 4 9 4.4 9 5C9 5.6 8.6 6 8 6Z" fill="white"></path>
-                      </svg>
-                    </button>
-                  </div>
-                  <div class="volume volume-btn">
-                    <button class="grey">
-                      <i class="fa fa-volume-up"></i>
-                    </button>
-                  </div>
-                  <a class="volume-mobile">
-                    <button class="grey">
-                      <i class="fa fa-volume-up"></i>
-                    </button>
-                  </a>
-                  <div class="fairness-modal-link icon-history">
-                    <i class="fas fa-history"></i>
-                  </div>
-                </div>
-              </div>
+            
             </div>
             <div class="crash-wrapper">
               <div id="crash-canvas" class="game">
