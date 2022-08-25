@@ -2,6 +2,7 @@ carregamentoStatico('../assets/html/barraTopo.html', '#MenuTop')
 carregamentoStatico('../assets/html/barraLateral.html', '#MenuLateral')
 carregamentoStatico('../assets/html/formularioLogin.html', '#MenuLogin')
 carregamentoStatico('../assets/html/formularioRegistro.html', '#MenuRegistro')
+carregamentoStatico('../assets/html/barraBatePapo.html', '#MenuBatePapo')
 
 if (localStorage.getItem('infologin')) {
 
