@@ -56,7 +56,7 @@ setIntervalAsync(async () => {
 
         io.emit('start_crash', teste)
       
-        console.log(timer)
+        // console.log(timer)
 
 
         if (--timer <= 0) {

@@ -50,7 +50,7 @@ $(document).on('click', '#btn__start', function(e){
                 }, 2000);
                 return false
             }
-            console.log(timer)
+            // console.log(timer)
             
             
         }, 100);

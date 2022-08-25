@@ -8,7 +8,8 @@ const io = new Server(server);
 
 const { start_crash } = require("./games/crash.js");
 const { getConnection } = require("./database.js");
-const { login } = require("./consultas.js");
+const { login, verificaEmail } = require("./consultas.js");
+const { registro } = require("./insercao.js");
 
 var contagem_tempo;
 
@@ -50,9 +51,26 @@ app.post('/consultaLogin', async (req, res) => {
   if (returnLogin.length > 0) {
     res.json(returnLogin)
   } else {
-    console.log('sem login');
+    res.json('semLogin')
   }
   
+})
+
+app.post('/consultaRegistroUsuario', async (req, res) => {
+
+  var returnVerificadorEmail = await verificaEmail(req.body);
+
+  if (returnVerificadorEmail.length > 0) {
+    res.json('emailRepetido')
+
+  } else {
+  var returnRegistro = await registro(req.body);
+  if (returnRegistro) {
+    res.json(returnRegistro)
+  } else {
+    res.json('semRegistro')
+  }
+}
 })
 
 
