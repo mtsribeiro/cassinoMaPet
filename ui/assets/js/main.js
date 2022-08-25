@@ -1,6 +1,6 @@
-carregamentoStatico('./assets/html/barraTopo.html', '#MenuTop')
-carregamentoStatico('./assets/html/barraLateral.html', '#MenuLateral')
-carregamentoStatico('./assets/html/formularioLogin.html', '#MenuLogin')
+carregamentoStatico('../assets/html/barraTopo.html', '#MenuTop')
+carregamentoStatico('../assets/html/barraLateral.html', '#MenuLateral')
+carregamentoStatico('../assets/html/formularioLogin.html', '#MenuLogin')
 
 if (localStorage.getItem('infologin')) {
 
