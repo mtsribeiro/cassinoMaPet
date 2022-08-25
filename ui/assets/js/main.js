@@ -1,6 +1,7 @@
 carregamentoStatico('../assets/html/barraTopo.html', '#MenuTop')
 carregamentoStatico('../assets/html/barraLateral.html', '#MenuLateral')
 carregamentoStatico('../assets/html/formularioLogin.html', '#MenuLogin')
+carregamentoStatico('../assets/html/formularioRegistro.html', '#MenuRegistro')
 
 if (localStorage.getItem('infologin')) {
 
@@ -37,7 +38,7 @@ if (localStorage.getItem('infologin')) {
       <button class="btn" id="OpenLogarUser" style="color: #fff; font-weight: bold">Login</button>
       </div>
       <div class="col-8">
-      <button class="btn btn-danger">Registre-se</button>
+      <button class="btn btn-danger" id="OpenRegistroUser">Registre-se</button>
       </div>`)
   }, 50);
 }

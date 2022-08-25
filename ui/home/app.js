@@ -43,8 +43,30 @@ $(document).on('click', '#checaLogin', function(e){
 })
 })
 
+$(document).on('click', '#OpenRegistroUser', function(e){
+  e.preventDefault()
+  $('#MenuRegistro').css('display', 'flex');
+  $('#MenuRegistro').css('opacity', '1')
+})
+
+$(document).on('click', '#cancelaRegistro', function(e){
+  e.preventDefault()
+  $('#MenuRegistro').css('opacity', '0')
+  $('#MenuRegistro').css('display', 'none');
+})
+
 $(document).on('click', '#deslogarLogin', function(e){
   e.preventDefault()
   localStorage.removeItem('infologin');
   document.location.reload(true);
+
+  $('#MenuLogin').css('display', 'none');
+})
+
+$(document).on('click', '#deslogarLogin', function(e){
+  e.preventDefault()
+  $('#MenuRegistro').css('display', 'none');
+  document.location.reload(true);
+
+  
 })
