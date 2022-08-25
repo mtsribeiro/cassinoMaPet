@@ -20,16 +20,16 @@ const start_crash = async (io) => {
 
     var d = Math.random();
     if (d <= 0.5){
-       var time = getRandom(0, 50)
+       var time = getRandom(0, 100)
        console.log('50%')
     }else if (d <= 0.8){
-        var time = getRandom(0, 100)
+        var time = getRandom(51, 500)
        console.log('20%')
     }else if (d <= 0.1){
-        var time = getRandom(0, 1000)
+        var time = getRandom(100, 5000)
         console.log('deu liga')
     }else{
-        var time = getRandom(0, 20)
+      var time = getRandom(0, 50)
     }
     
   var duration = time;
@@ -63,7 +63,7 @@ setIntervalAsync(async () => {
 
           setTimeout(() => {
             start_crash(io)
-          }, 10000);
+          }, 20000);
 
           return false;
         }

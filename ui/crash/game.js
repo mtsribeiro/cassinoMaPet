@@ -1,3 +1,5 @@
+var socket = io();
+
 $(document).on('click', '#btn__start', function(e){
 
 })
@@ -57,14 +59,27 @@ $(document).on('click', '#btn__start', function(e){
 
 
     socket.on('start_crash', function(msg) {
+        $('.crash_display').css('display', 'none');
+        $('.multiplicador').css('display', 'none');
+        $('.multiplicador').css('background-color', '#1a252f');
+
+
+        $('#btn__start').attr('disabled', true);
+        $('#btn__start').css('display', 'none');
+        $('#btn__stop').css('display', 'block');
         $('.multiplicador').css('display', 'block');
-        $('.multiplicador').text(msg.multiplicador)
-        console.log(msg)
+        $('.multiplicador').text(msg.multiplicador+'X')
+        // console.log(msg)
     })
 
     socket.on('start_end', function(msg) {
+
         $('.multiplicador').css('display', 'block');
-        $('.multiplicador').text(msg.multiplicador)
-        console.log(msg)
+        $('#btn__start').attr('disabled', false);
+        $('#btn__start').css('display', 'block');
+        $('#btn__stop').css('display', 'none');
+        $('.multiplicador').css('background-color', '#f12c4c');
+        $('.crash_display').css('display', 'block');
+
     })
 
