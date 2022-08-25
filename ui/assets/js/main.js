@@ -5,11 +5,9 @@ carregamentoStatico('../assets/html/formularioLogin.html', '#MenuLogin')
 if (localStorage.getItem('infologin')) {
 
   var infoUser = JSON.parse(localStorage.getItem('infologin'));
-  console.log(infoUser);
   $('#MenuLogin').css('display', 'none');
 
   setTimeout(() => {
-    console.log('logado');
     $('#monitoramentoLogin').append(`<div class="col-3">
     <div class="dropdown">
       <button class="dropdown-toggle btn" data-bs-toggle="dropdown" aria-expanded="false">
@@ -35,7 +33,6 @@ if (localStorage.getItem('infologin')) {
 } else {
 
   setTimeout(() => {
-    console.log('deslogado');
     $('#monitoramentoLogin').append(`<div class="col-4">
       <button class="btn" id="OpenLogarUser" style="color: #fff; font-weight: bold">Login</button>
       </div>

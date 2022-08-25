@@ -45,7 +45,6 @@ $(document).on('click', '#checaLogin', function(e){
 
 $(document).on('click', '#deslogarLogin', function(e){
   e.preventDefault()
-  console.log('teste');
   localStorage.removeItem('infologin');
   document.location.reload(true);
 })
