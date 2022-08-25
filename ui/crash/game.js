@@ -69,6 +69,9 @@ $(document).on('click', '#btn__start', function(e){
         $('#btn__stop').css('display', 'block');
         $('.multiplicador').css('display', 'block');
         $('.multiplicador').text(msg.multiplicador+'X')
+
+        var valor_aposta = $('#valor_aposta').val() 
+        $('#btn__stop').text('Retirar R$'+(valor_aposta*msg.multiplicador).toFixed(2))
         // console.log(msg)
     })
 

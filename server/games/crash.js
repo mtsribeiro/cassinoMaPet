@@ -15,9 +15,13 @@ const setIntervalAsync = (fn, ms) => {
     return Math.random() * (max - min) + min;
   }
   
-
+var rolando = false;
 const start_crash = async (io) => {
+  if(rolando == true){
+    return false;  
+  }
 
+  rolando = true;
     var d = Math.random();
     if (d <= 0.5){
        var time = getRandom(0, 100)
@@ -60,10 +64,11 @@ setIntervalAsync(async () => {
           contagem = 0
           
           io.emit('start_end')
-
+          rolando = false;
           setTimeout(() => {
+            
             start_crash(io)
-          }, 20000);
+          }, 10000);
 
           return false;
         }
