@@ -72,7 +72,8 @@ $(document).on('click', '#btn__start', function(e){
         $('.crash_display').css('display', 'none');
         $('.multiplicador').css('display', 'none');
         $('.multiplicador').css('background-color', '#1a252f');
-
+        
+        $('#valor_aposta').attr('disabled', true);
         $('#btn__start').attr('disabled', true);
         $('.multiplicador').css('display', 'block');
         $('.multiplicador').text(msg.multiplicador+'X')
@@ -91,6 +92,7 @@ $(document).on('click', '#btn__start', function(e){
 
     socket.on('start_end', function(msg) {
         CrashAposta = false;
+        $('#valor_aposta').attr('disabled', false);
         $('.multiplicador').css('display', 'block');
         $('#btn__start').attr('disabled', false);
         $('#btn__start').css('display', 'block');
