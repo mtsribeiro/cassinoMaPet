@@ -1,7 +1,17 @@
 var socket = io();
 
+var CrashAposta = false;
+
 $(document).on('click', '#btn__start', function(e){
 
+    if(CrashAposta == false){
+        CrashAposta = true;
+        $(this).text('Cancelar')
+    }else{
+        CrashAposta = false;
+        $(this).text('Começar o jogo')
+    }
+  
 })
 
     
@@ -63,23 +73,28 @@ $(document).on('click', '#btn__start', function(e){
         $('.multiplicador').css('display', 'none');
         $('.multiplicador').css('background-color', '#1a252f');
 
-
         $('#btn__start').attr('disabled', true);
-        $('#btn__start').css('display', 'none');
-        $('#btn__stop').css('display', 'block');
         $('.multiplicador').css('display', 'block');
         $('.multiplicador').text(msg.multiplicador+'X')
+        if(CrashAposta == true){
+            $('#btn__start').css('display', 'none');
+            $('#btn__stop').css('display', 'block');
+            var valor_aposta = $('#valor_aposta').val() 
+           $('#btn__stop').text('Retirar R$'+(valor_aposta*msg.multiplicador).toFixed(2))
+            
+        }
 
-        var valor_aposta = $('#valor_aposta').val() 
-        $('#btn__stop').text('Retirar R$'+(valor_aposta*msg.multiplicador).toFixed(2))
+       
+        
         // console.log(msg)
     })
 
     socket.on('start_end', function(msg) {
-
+        CrashAposta = false;
         $('.multiplicador').css('display', 'block');
         $('#btn__start').attr('disabled', false);
         $('#btn__start').css('display', 'block');
+        $('#btn__start').text('Começar o jogo')
         $('#btn__stop').css('display', 'none');
         $('.multiplicador').css('background-color', '#f12c4c');
         $('.crash_display').css('display', 'block');
