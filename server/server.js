@@ -50,7 +50,7 @@ app.post('/consultaLogin', async (req, res) => {
   if (returnLogin.length > 0) {
     res.json(returnLogin)
   } else {
-    res.json('semLogin')
+    console.log('sem login');
   }
   
 })

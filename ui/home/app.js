@@ -1,12 +1,14 @@
 
   $(document).on('click', '#OpenLogarUser', function(e){
     e.preventDefault()
+    $('#MenuLogin').css('display', 'flex');
     $('#MenuLogin').css('opacity', '1')
   })
 
   $(document).on('click', '#cancelaLogin', function(e){
     e.preventDefault()
     $('#MenuLogin').css('opacity', '0')
+    $('#MenuLogin').css('display', 'none');
   })
 
 $(document).on('click', '#checaLogin', function(e){
@@ -25,10 +27,18 @@ $(document).on('click', '#checaLogin', function(e){
 })
 .done(function(msg){
     if (msg != 'semLogin') {
+
       localStorage.setItem('infologin', JSON.stringify(msg))
+
+      $('#MenuLogin').css('display', 'none');
       document.location.reload(true);
+
     } else {
-      console.log('sem login');
+      $('.toast').toast('show');
+
+      setTimeout(() => {
+        $('.toast').toast('hide');
+      }, 5000);
     }
 })
 })
