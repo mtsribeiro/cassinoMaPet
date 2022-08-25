@@ -55,15 +55,6 @@ app.post('/consultaLogin', async (req, res) => {
   
 })
 
-// setTimeout(() => {
-//   console.log('start_crash')
-// }, 1000);
-// setInterval(() => {
-//   console.log('start_crash')
-//   io.emit('start_crash')
-  
-// }, 5000);
-
 
 server.listen(port, () => {
   console.log(`Servidor web em execução: http://localhost:${port}`);
