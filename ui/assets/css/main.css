@@ -134,3 +134,13 @@ body{
 #cancelaRegistro:hover{
     background: #0f1923;
 }
+
+.nickBatePapo{
+    font-size: 10pt;
+    background-color: #252f38;
+}
+
+.mensagemBatePapo{
+    font-size: 8pt;
+    background-color: #252f38;
+}
