@@ -95,3 +95,24 @@ body{
 #EsqueceuSenha:hover{
     color: #fff !important;
 }
+
+.itensMenuPerfil{
+    font-size: 9pt;
+    color: #9095ac;
+}
+
+.iconeMenuPerfil{
+    margin-right: 12px;
+}
+
+.menuPerfil{
+    background-color: #fefefe;
+}
+
+.itensMenuPerfil:hover{
+    color: #f12c4c
+}
+
+.btn-exibeMoney{
+    width: 120px;
+}
