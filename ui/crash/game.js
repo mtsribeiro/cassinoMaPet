@@ -6,9 +6,11 @@ $(document).on('click', '#btn__start', function(e){
 
     if(CrashAposta == false){
         CrashAposta = true;
+        $('#valor_aposta').attr('disabled', true);
         $(this).text('Cancelar')
     }else{
         CrashAposta = false;
+        $('#valor_aposta').attr('disabled', false);
         $(this).text('Começar o jogo')
     }
   
@@ -66,9 +68,19 @@ $(document).on('click', '#btn__start', function(e){
         }, 100);
     }
 
-
+    
+    socket.on('crash_carregamento', function(msg) {
+        // console.log(msg)
+        $('.crash_display').css('display', 'none');
+        $('.multiplicador').css('display', 'none');
+        $('.loading_game').css('display', 'block')
+        
+        $('#barra_carregamento').css('width', `calc(${msg}% - 66px)`)
+        
+    })
 
     socket.on('start_crash', function(msg) {
+        $('.loading_game').css('display', 'none')
         $('.crash_display').css('display', 'none');
         $('.multiplicador').css('display', 'none');
         $('.multiplicador').css('background-color', '#1a252f');
@@ -85,12 +97,13 @@ $(document).on('click', '#btn__start', function(e){
             
         }
 
-       
+        
         
         // console.log(msg)
     })
 
     socket.on('start_end', function(msg) {
+        
         CrashAposta = false;
         $('#valor_aposta').attr('disabled', false);
         $('.multiplicador').css('display', 'block');
@@ -100,6 +113,6 @@ $(document).on('click', '#btn__start', function(e){
         $('#btn__stop').css('display', 'none');
         $('.multiplicador').css('background-color', '#f12c4c');
         $('.crash_display').css('display', 'block');
-
+        
     })
 
