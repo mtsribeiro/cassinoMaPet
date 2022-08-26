@@ -21,22 +21,35 @@
     
 </head>
 <body>
-<div id="MenuTop"></div>
-<div id="MenuLateral"></div>
-<div id="MenuLogin" style="display: none;"></div>
-<div id="MenuRegistro" style="display: none;"></div>
 
-<div role="alert" aria-live="assertive" aria-atomic="true" class="toast" style="position: absolute; top: 82px; right: 12px; border-top: 0px; border-radius: 12px;" data-bs-autohide="false">
-  <div class="toast-header" style="background-color: #262f3c; border-bottom: solid 1px #323b45; border-top: 0px;">
-    <i class="bi bi-exclamation-triangle-fill" style="margin-right: 12px; color: #f8305b;"></i>
-    <strong class="me-auto" style="color: #fff;">Login</strong>
-    <small>Agora</small>
-    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+  <!-- DINAMICO -->
+  <div id="MenuTop"></div>
+  <div class="row">
+    <div class="col-3">
+      <div id="MenuLateral"></div>
+    </div> 
+    <div class="col">
+      <div id="conteudo"></div>
+    </div>
+    <div class="col-2" id="ColunaBatePapo" style="display: none;">
+      <div id="MenuBatePapo"></div>
+    </div>
   </div>
-  <div class="toast-body" style="background-color: #262f3c; color: #fff">
-    Usuário ou senha não conferem.
+
+    <div id="MenuLogin" style="display: none;"></div>
+    <div id="MenuRegistro" style="display: none;"></div>
+
+  <div role="alert" aria-live="assertive" aria-atomic="true" class="toast" style="position: absolute; top: 82px; right: 12px; border-top: 0px; border-radius: 12px;" data-bs-autohide="false">
+    <div class="toast-header" style="background-color: #262f3c; border-bottom: solid 1px #323b45; border-top: 0px;">
+      <i class="bi bi-exclamation-triangle-fill" style="margin-right: 12px; color: #f8305b;"></i>
+      <strong class="me-auto" style="color: #fff;">Login</strong>
+      <small>Agora</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body" id="avisoToast" style="background-color: #262f3c; color: #fff"></div>
   </div>
-</div>
+<!-- END DINAMICO -->
+
 
 <div id="page-container">
   <div class="scrollable">
