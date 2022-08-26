@@ -112,10 +112,11 @@ setIntervalAsync(async () => {
           
           io.emit('start_end')
           rolando = false;
-          setTimeout(() => {
+          contagem_regressiva(io)
+          // setTimeout(() => {
             
-            start_crash(io)
-          }, 10000);
+          //   contagem_regressiva(io)
+          // }, 10000);
           partidas++
           return false;
         }
@@ -124,6 +125,31 @@ setIntervalAsync(async () => {
 
      
 
+}
+
+var contagem_new;
+function startTimer(duration, io) {
+  var timer = duration;
+ var contagem_new = setInterval(function () {
+      
+      // console.log(timer)
+      timer = timer-1
+      if (--timer < 0) {
+        start_crash(io)
+          timer = duration;
+          // console.log('entrou')
+          clearInterval(contagem_new)
+          return false;
+      }else{
+        io.emit('crash_carregamento', timer)
+      }
+  }, 100);
+}
+
+function contagem_regressiva(io){
+  var duration = 100; // Converter para segundos
+
+    startTimer(duration, io); // iniciando o timer
 }
 
 
