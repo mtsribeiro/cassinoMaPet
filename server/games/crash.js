@@ -134,7 +134,7 @@ contagem_new = setInterval(function () {
       
       // console.log(timer)
       timer = timer-1
-      console.log(timer)
+      // console.log(timer)
       if (timer < 0) {
         
           timer = duration;
