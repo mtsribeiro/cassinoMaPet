@@ -138,7 +138,7 @@ body{
 .nickBatePapo{
     font-size: 10pt;
     background-color: #252f38;
-    color: #6ed9e3;
+    color: #aebfc7;
     font-weight: bold;
     padding: 6px;
 }
@@ -154,4 +154,52 @@ body{
     border: 0;
     margin-top: 12px;
     border-radius: 12px;
+}
+
+#chat-footer {
+    flex-grow: 0;
+    flex-shrink: 0;
+    position: relative;
+    display: flex;
+    padding: 0 24px 7px;
+}
+
+#chat-footer textarea {
+    background: #1a242d;
+    width: 100%;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2;
+    color: #fff;
+    height: 48px;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid #515963;
+    resize: none !important;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+#chat-footer .send {
+    color: #fff;
+    width: 48px;
+    height: 48px;
+}
+
+button.red, input.submit-button.red {
+    background-color: #f12c4c;
+    color: #fff;
+    border-radius: 4px;
+    padding: 15px;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: -.3px;
+}
+
+#fechaBatePapo{
+    background-color: #313a42;
+    border-radius: 100%;
 }

@@ -8,6 +8,7 @@ if (localStorage.getItem('infologin')) {
 
   var infoUser = JSON.parse(localStorage.getItem('infologin'));
   $('#MenuLogin').css('display', 'none');
+  $('#ColunaBatePapo').css('display', 'block');
 
   setTimeout(() => {
     $('#monitoramentoLogin').append(`<div class="col-3">
@@ -124,9 +125,7 @@ $('#MenuLogin').css('display', 'none');
 })
 
 $(document).on('click', '#deslogarLogin', function(e){
-e.preventDefault()
-$('#MenuRegistro').css('display', 'none');
-document.location.reload(true);
-
-
+  e.preventDefault()
+  $('#MenuRegistro').css('display', 'none');
+  document.location.reload(true);
 })
