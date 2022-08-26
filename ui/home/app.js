@@ -1,5 +1,4 @@
-
-  $(document).on('click', '#OpenLogarUser', function(e){
+$(document).on('click', '#OpenLogarUser', function(e){
     e.preventDefault()
     $('#MenuLogin').css('display', 'flex');
     $('#MenuLogin').css('opacity', '1')
@@ -31,9 +30,11 @@ $(document).on('click', '#checaLogin', function(e){
       localStorage.setItem('infologin', JSON.stringify(msg))
 
       $('#MenuLogin').css('display', 'none');
+      $('#ColunaBatePapo').css('display', 'block');
       document.location.reload(true);
 
     } else {
+
       $('#avisoToast').text('Usuário ou senha não conferem.')
       $('.toast').toast('show');
 
@@ -59,13 +60,7 @@ $(document).on('click', '#cancelaRegistro', function(e){
 $(document).on('click', '#deslogarLogin', function(e){
   e.preventDefault()
   localStorage.removeItem('infologin');
-  document.location.reload(true);
-
-  $('#MenuLogin').css('display', 'none');
-})
-
-$(document).on('click', '#deslogarLogin', function(e){
-  e.preventDefault()
+  $('#ColunaBatePapo').css('display', 'none');
   $('#MenuRegistro').css('display', 'none');
   document.location.reload(true);
 })
@@ -122,4 +117,14 @@ $(document).on('click', '#checaRegistro', function(e){
     }
 }
 })
+})
+
+$(document).on('click', '#fechaBatePapo', function(e){
+  $('#batepapoLateral').css('display', 'none')
+  $('#ReabreBatePapo').css('display', 'block')
+})
+
+$(document).on('click', '#ReabreBatePapo', function(e){
+  $('#batepapoLateral').css('display', 'block')
+  $('#ReabreBatePapo').css('display', 'none')
 })

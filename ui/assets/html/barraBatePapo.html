@@ -1,8 +1,32 @@
-<div style="background-color: #1a242d; align-items: center; padding: 0 24px;">
-    <div class="card border-primary mb-3 BalaoBatePapo">
-        <div class="card-header nickBatePapo">Nome</div>
-        <div class="card-body mensagemBatePapo">
-          <p class="card-text mensagemBatePapo">mensagem</p>
-        </div>
+<div style="background-color: #1a242d;" id="batepapoLateral">
+  <div style="align-items: center; padding: 0 24px;">
+    <button class="btn btn-close" id="fechaBatePapo"></button>
+  </div>
+
+  <div style="align-items: center; padding: 0 24px;">
+      <div class="card border-primary mb-3 BalaoBatePapo">
+          <div class="card-header nickBatePapo">Mateus</div>
+          <div class="card-body mensagemBatePapo">
+            <p class="card-text mensagemBatePapo">mensagem</p>
+          </div>
+      </div>
+  </div>
+
+  <div id="chat-footer">
+    <div class="textarea-wrapper">
+      <textarea placeholder="Digite sua mensagem"></textarea>
+      <div class="emoji-wrapper hidden">
+        <i class="far fa-smile"></i>
+      </div>
     </div>
+    <div class="bottom" style="margin-left: 13px;">
+      <button class="btn btn-danger send red">
+        <i class="bi bi-send-fill"></i>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div>
+  <button class="btn btn-danger" id="ReabreBatePapo" style="border-radius: 50%;width: 55px;height: 55px;position: absolute;bottom: 10px;right: 13px; display: none;"><i class="bi bi-chat"></i></button>
 </div>
