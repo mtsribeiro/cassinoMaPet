@@ -138,9 +138,20 @@ body{
 .nickBatePapo{
     font-size: 10pt;
     background-color: #252f38;
+    color: #6ed9e3;
+    font-weight: bold;
+    padding: 6px;
 }
 
 .mensagemBatePapo{
     font-size: 8pt;
     background-color: #252f38;
+    color: #e0e4f2;
+    padding: 3px;
+}
+
+.BalaoBatePapo{
+    border: 0;
+    margin-top: 12px;
+    border-radius: 12px;
 }
