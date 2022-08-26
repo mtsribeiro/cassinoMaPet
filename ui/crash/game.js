@@ -71,11 +71,21 @@ $(document).on('click', '#btn__start', function(e){
     
     socket.on('crash_carregamento', function(msg) {
         // console.log(msg)
-        $('.crash_display').css('display', 'none');
-        $('.multiplicador').css('display', 'none');
-        $('.loading_game').css('display', 'block')
+
+
+
+        if(msg < 100){
+            $('.crash_display').css('display', 'none');
+            $('.multiplicador').css('display', 'none');
+            $('.loading_game').css('display', 'block')
+
+            // new_msg = msg+20;
+            console.log(msg)
+            $('#barra_carregamento').css('width', `calc(${msg}% - 66px)`)
+        }else{
+            
+        }
         
-        $('#barra_carregamento').css('width', `calc(${msg}% - 66px)`)
         
     })
 

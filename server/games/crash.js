@@ -130,15 +130,17 @@ setIntervalAsync(async () => {
 var contagem_new;
 function startTimer(duration, io) {
   var timer = duration;
- var contagem_new = setInterval(function () {
+contagem_new = setInterval(function () {
       
       // console.log(timer)
       timer = timer-1
-      if (--timer < 0) {
-        start_crash(io)
+      console.log(timer)
+      if (timer < 0) {
+        
           timer = duration;
           // console.log('entrou')
           clearInterval(contagem_new)
+          start_crash(io)
           return false;
       }else{
         io.emit('crash_carregamento', timer)
@@ -147,7 +149,7 @@ function startTimer(duration, io) {
 }
 
 function contagem_regressiva(io){
-  var duration = 100; // Converter para segundos
+  var duration = 120; // Converter para segundos
 
     startTimer(duration, io); // iniciando o timer
 }
